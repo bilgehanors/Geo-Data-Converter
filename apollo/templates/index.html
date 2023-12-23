@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="icon" href="../static/apollo/images/tab.png">
+  <link rel="stylesheet" href="{% static 'apollo/css/style.css' %}">
+</head>
+<body>
+  {% include 'header.html' %}
+  
+  <div class="welcome">
+    <p class="welcome-txt">GEO Data Converter</p>
+    <button class="lesgo">Explore Now</button>
+  </div>
+
+
+  {% include 'footer.html' %}
+</body>
+</html>

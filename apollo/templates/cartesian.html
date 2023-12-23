@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartesian To Elliptic</title>
+  <link rel="icon" href="../static/apollo/images/tab.png">
+  <link rel="stylesheet" href="{% static 'apollo/css/style.css' %}">
+</head>
+<body>
+  {% include 'header.html' %}
+  <h2>Kartezyen'den Eliptik Koordinat Dönüşümü</h2>
+
+  <form id="coordinateForm">
+      <label for="precision">Hassasiyet (Precision):</label>
+      <input type="number" id="precision" name="precision" required>
+      
+      <label for="ellipsoid">Ellipsoid:</label>
+      <select id="ellipsoid" name="ellipsoid" required>
+          <option value="WGS84">WGS84</option>
+          <option value="GRS80">GRS80</option>
+      </select>
+      
+      <label for="x">X Kartezyen Koordinat:</label>
+      <input type="number" id="x" name="x" required>
+      
+      <label for="y">Y Kartezyen Koordinat:</label>
+      <input type="number" id="y" name="y" required>
+      
+      <label for="z">Z Kartezyen Koordinat:</label>
+      <input type="number" id="z" name="z" required>
+      
+      <button type="button" onclick="convertCoordinates()">Dönüştür</button>
+  </form>
+  {% include 'footer.html' %}
+</body>
+</html>

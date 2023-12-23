@@ -1,0 +1,384 @@
+.leaflet-editing-icon {
+    background-color: rgb(0, 55, 105); /* Blue */
+    border-radius: 50%;
+
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #ffffff; /* Dark Blue */
+    color: #ffffff; /* White */
+    font-family: 'Times New Roman', Times, serif;
+}
+.leaflet-control-layers-toggle {
+
+}
+#map {
+    display: flex;
+    height: 95%;
+    width: 95%;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid black ;
+    border-radius: 10px;
+   
+}
+
+#area-display {
+    background-color: rgb(0, 55, 105); /* Dark Blue */
+    color: #ffffff; /* White */
+    padding: 10px;
+    border: 2px solid rgb(0, 55, 105); /* Blue */
+    border-radius: 5px;
+    height: 20px;
+    margin-top: 10%;
+    width: 40%;
+}
+#slope-roof {
+    display: block;
+    margin-bottom: 3px;
+}
+#search-bar {
+    
+    width: 85%;
+    color: #ffffff; /* White */
+    margin-bottom: 50px; /* Optional: Add margin-bottom for spacing */
+}
+
+.clickable-logo {
+    padding-top: 20px;
+    padding-bottom: 2%;
+    margin-right: auto;
+    width: 150px;
+}
+.header-logo {
+    width: 100%;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 55, 105);
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    height: 60px;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Spreads the items horizontally */
+    width: 100%;
+    z-index: 10000; /* Ensure the header is above other elements */
+}
+
+.menu {
+    
+    align-items: center; /* Center vertically */
+    
+}
+
+.header a {
+    color: #ffffff; 
+    text-decoration: none;
+    margin: 0 15px;
+    
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+.header-dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.header-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2980b9; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.header-dropdown:hover .header-dropdown-content {
+    display: block;
+}
+
+.header-dropdown-content a {
+    color: #ffffff; 
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+.header-dropdown-content a:hover {
+    background-color: #2980b9; 
+    text-decoration: underline;
+}
+
+.coordinates, .go {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.coordinates {
+    color: black;
+}
+
+h1, h2 {
+    margin-top: 6%;
+    margin-bottom: 1%;
+    text-align: center;
+    font-size:25px;
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    color: #000000;
+    background-color: #ffffff;
+    font-family:'Times New Roman', Times, serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover styles */
+button:hover {
+    background-color: rgb(0, 55, 105);
+    color: #fff;
+    font-family:'Times New Roman', Times, serif;
+    border: 1px solid #ffffff;
+    
+    
+}
+.footer-container {
+    flex-shrink: 0; /* Prevents the footer from shrinking */
+}
+
+footer {
+    background-color: rgb(0, 55, 105);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+footer a:hover {
+    text-decoration: underline;
+  }
+
+.powered-by {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 0%;
+    color: #000000;
+}
+
+.calculator-container {
+    background-color: #ffffff;
+    padding: 40px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin: auto; /* Center the container horizontally */
+    margin-top: 6%; /* Add margin-top */
+    margin-bottom: 20px; /* Add margin-bottom */
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+select {
+    width: 100%;
+    padding: 10px; 
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: rgb(0, 55, 105);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Add a transition for a smooth effect */
+}
+
+button:hover {
+    background-color: #297fb8; /* Change the background color on hover */
+}
+
+
+#calculation-results{
+    color: #000000;
+}
+
+.container {
+    display: flex;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 5%;
+    margin-top: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.leaflet-control-geocoder-alternatives{
+    background-color: #ccc;
+
+}
+#not-sure-input{
+    width: 80%;
+}
+
+.mapc{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.small{
+    padding-top: 20px;
+    padding-left: 10px;
+    width: 40%;
+    display: inline-block;
+    height: 600px;
+}
+.leaflet-control-geocoder{
+    width: 100%;
+    height: 35px;
+}
+.leaflet-control-geocoder-icon {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.leaflet-control-geocoder-icon img {
+    margin-right: 8px; /* Optional: Add margin to the right if needed */
+    width: 100%;
+}
+
+
+.welcome1{
+    background-image: url(../images/solar1.jpg);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 800px;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.welcome2{
+    display: flex;
+    height: 500px;
+    
+    justify-content: center;
+}
+.welcome-txt{
+    color: #ffffff ;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    text-align: left;
+    transform: translate(8%, 30%);
+}
+.wel-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    
+    border-radius: 4px;
+    color: rgb(0, 55, 105);
+    background-color: #ffffff;
+    font-family:'Times New Roman', Times, serif;
+    transition: background-color 0.3s, color 0.3s;
+    opacity: 0.9;
+}
+.wel-btn:hover {
+    background-color: rgb(0, 55, 105);
+    color: #fff;
+    font-family:'Times New Roman', Times, serif;
+    border: 1px solid #ffffff;
+}
+
+
+.welcome-btn {
+    position: absolute;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px 20px;
+    text-align: left;
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+.mockup-welcome-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto; /* Added to maintain aspect ratio */
+    height: auto; /* Added to maintain aspect ratio */
+}
+.txt1{
+    color: #383a42;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 38px;
+    font-weight: 100;
+    padding-left: 10%;
+    padding-bottom: 10%;
+    padding-top: 18%;
+}
+.welcome2-left {
+    width: 50%;
+}
+
+.welcome2-right {
+    width: 50%;
+}

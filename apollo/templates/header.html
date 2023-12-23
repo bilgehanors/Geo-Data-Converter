@@ -1,0 +1,22 @@
+{% load static %}
+
+<div class="header" >
+  <div class="clickable-logo">
+      <a href="{% url 'index' %}">
+          <img class="header-logo" src="{% static 'apollo/images/2.png' %}" alt="Your Image">
+      </a>
+  </div>
+  <div class="menu">
+    
+      <a href="{% url 'index' %}">Home</a>
+      <a href="{% url 'time' %}">Time</a>
+      <a href="{% url 'coordinate' %}">Coordinate</a>
+      <a href="{% url 'cartesian' %}">Cartesian</a>
+      <a href="http://127.0.0.1:8000/admin/">
+          <button >Login</button></a>    
+
+      </div>
+   </div>
+  </div>
+</div>
+
