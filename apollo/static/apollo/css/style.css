@@ -1,4 +1,15 @@
-
+#resultOutputc{
+  color: #000000;
+  font-size: 40px;
+}
+#resultOutpute{
+  color: #000000;
+  font-size: 40px;
+}
+#resultOutput{
+  color: #000000;
+  font-size: 40px;
+}
 .header {
   position: fixed;
   top: 0;
@@ -54,6 +65,29 @@
   
 }
 
+.footer-container {
+  flex-shrink: 0; /* Prevents the footer from shrinking */
+}
+
+footer {
+  background-color: #0858c0;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+
+  width: 100%;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
 .calculator-container {
   display: flex;
   justify-content: center;
@@ -102,12 +136,14 @@ input {
 }
 
 button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
+  background-color: #ff6600; /* Orange color */
+  color: #ffffff; /* Text color */
+  padding: 10px 20px;
+  border-radius: 25px; /* Adjust the border-radius for roundness */
+  text-decoration: none;
+  font-size: 16px;
   cursor: pointer;
+  border: none;
 }
 
 button:hover {
@@ -123,14 +159,13 @@ button:hover {
 
 .welcome {
   background-image: url(../images/data.jpg);
-  background-size: 100%;
-  background-position: center;
+  background-size: 100% 100%;
   width: 100%;
-  height: 350px;
   position: relative;
   text-align: center;
-  color: rgb(0, 0, 0);
+  height: 350px;
   position: relative;
+  color: rgb(0, 0, 0);
   
 }
 .welcome-txt {
@@ -160,4 +195,29 @@ button:hover {
   left: 50%;
   transform: translate(-50%, 0);
   justify-content: center;
+}
+
+.welcome2{
+  display: flex;
+  height: 500px;
+  
+  justify-content: center;
+}
+.welcome2-left {
+  width: 50%;
+}
+
+.welcome2-right {
+  width: 50%;
+}
+.txt1{
+  color: #383a42;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 38px;
+  font-weight: 100;
+  padding-left: 10%;
+  padding-bottom: 10%;
+  padding-top: 18%;
 }
