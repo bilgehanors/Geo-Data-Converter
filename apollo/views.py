@@ -107,7 +107,6 @@ def convert_time_to_different_scales(year, month, day, sec_of_day):
 
     return tai, utc, tt, bdt, julian_date_with_frac
 
-from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 import json
@@ -123,14 +122,14 @@ def new_coordinate(request):
         roty = data.get('roty', '0')
         rotz = data.get('rotz', '0')
         if x == 0:
-            return JsonResponse({'error': 'Please write a cord'})
+            return HttpResponse({'error': 'Please write a cord'})
         else:
            old_coordinates = [int(x), int(y), int(z)]
            new_coordinates = rotate_3d(old_coordinates, int(rotx), int(roty), int(rotz))
-           return JsonResponse({'result': f'New cordinates are: {new_coordinates}'})
+           return HttpResponse( f'New cordinates are: {new_coordinates}')
 
   else:
-     return JsonResponse({'error': 'Invalid request method'})
+     return HttpResponse({'error': 'Invalid request method'})
 
            
 @csrf_exempt
@@ -143,10 +142,10 @@ def ellipsoid(request):
         precision = data.get('precision', '0')
         ellipsoid = data.get('ellipsoid', '0') 
         if x == 0:
-            return JsonResponse({'error': 'Please write a cord'})
+            return HttpResponse({'error': 'Please write a cord'})
         else:
            phi, lam, h = xyz2blh(float(x), float(y), float(z),float(precision))
-           return JsonResponse({'result': f'New cordinates are: {phi}, {lam},{h}'})
+           return HttpResponse(f'New cordinates are: {phi}, {lam},{h}')
 
 
 
@@ -159,7 +158,7 @@ def new_time(request):
         date = data.get('datum', '0')
         sec = data.get('sec','0')
         if date == 0:
-            return JsonResponse({'error': 'Please write a date'})
+            return HttpResponse({'error': 'Please write a date'})
         else:
           result_date = date.split(".")
           year = int(result_date[2])
@@ -167,10 +166,10 @@ def new_time(request):
           day = int(result_date[0])
           sec_of_day = int(sec)
           tai_result, utc_result, tt_result, bdt_result ,julian_date_with_frac_result= convert_time_to_different_scales(year,month,day,sec_of_day)
-          return JsonResponse({'result': f'TAI Time {tai_result}, UTC Time {utc_result}, TT Time  {tt_result}, BDT Time {bdt_result}, Julian Date {julian_date_with_frac_result}'})
+          return HttpResponse( f'TAI Time {tai_result}, UTC Time {utc_result}, TT Time  {tt_result}, BDT Time {bdt_result}, Julian Date {julian_date_with_frac_result}')
 
   else:
-     return JsonResponse({'error': 'Invalid request method'})
+     return HttpResponse({'error': 'Invalid request method'})
 
 
 
